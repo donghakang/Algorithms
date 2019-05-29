@@ -21,13 +21,11 @@ def hyperspace_jump_route(star_list,jump_times):
                 build_min_heap(Q)
                 v.prev = u
         l.append(u)
-
     list = []
     path = l.pop()
     while path != None:
         list.insert(0,path)
         path = path.prev
-
     return list
 
 #Min-priority queue implementation: used for Dijkstra's algorithm

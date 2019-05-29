@@ -111,7 +111,6 @@ def max_heap_insert(A,task):
     pass
 
 
-
 #  DO NOT EDIT BELOW THIS LINE
 
 #Heap class: inherits from list.

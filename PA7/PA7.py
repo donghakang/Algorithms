@@ -32,9 +32,6 @@ def find_path(start_node):
     return list
 
 
-
-
-
 #  DO NOT EDIT BELOW THIS LINE
 
 #Square class

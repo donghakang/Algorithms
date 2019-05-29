@@ -135,7 +135,6 @@ e19 = Email("Teddddddddddd","have")
 e20 = Email("Tedddddddddddd","Long")
 
 
-
 inbox1 = []
 inbox2 = [e13]
 inbox3 = [e2,e6]

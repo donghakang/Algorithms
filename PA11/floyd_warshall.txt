@@ -1,0 +1,20 @@
+Setup_Prev(Weights)
+1	let Prev be a (n x n) matrix filled with NIL
+2	for i = 1 to n
+3		for j = 1 to n
+4			if i != j and Weights[i, j] < ∞  //Is there an edge from i to j?
+5				Prev[i, j] = i
+6	return Prev
+
+Floyd_Warshall(Weights)
+1	n = len(Weights)
+2	Prev = Setup_Prev(Weights)
+3	Dist = Weights
+4	for k = 1 to n
+5		for i = 1 to n
+6			for j = 1 to n
+7				thru_k = Dist[i, k] + Dist[k, j]
+8				if thru_k < Dist[i, j]
+9					Dist[i, j] = thru_k
+10					Prev[i, j] = Prev[k, j]
+11	return Dist

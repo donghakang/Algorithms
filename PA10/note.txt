@@ -1,0 +1,49 @@
+num -> number 0 ~ #of stars, represent the index of the star in LIST
+
+color -> color of the ..
+
+adj -> a list of other star adjacent.
+
+jump-times : list of integers representing the edge weights between
+             this and every other star. in order of index Number
+
+__dist -> private so call get_dist, set_dist -> .d
+
+prev -> previous stars
+
+x -> where star will be drown in the map
+y -> same.
+
+
+
+star_list = [red:inf, orange:inf, yellow:inf]
+jump_times = [[inf, 5, 2], [5, inf, 2], [2, 2, inf]]
+
+
+DIJKSTRA(G,w,r)
+4 	r.d = 0
+5 	Q = G.V
+6 	build_min_heap(Q)
+7 	while Q not Empty
+8       u = extract_min(Q)
+9       for each vertex v in u.adj
+10			if v.d > u.d + w(u,v)
+12				v.prev = u
+13				i = Q.index(v)
+13				decrease_key(Q, i, w(u,v)+u.d)
+
+
+DIJKSTRA(G,weights,source)
+1   INITIALIZE_SINGLE_SOURCE(G,source)
+2   Q = G.V
+3   while Q not Empty
+4       u = EXTRACT_MIN(Q)
+5       for each vertex v in u.adj
+6           RELAX(u,v,weights)
+
+RELAX(u,v,weights,Q)
+1	if v.dist > u.dist + weights(u,v)
+2		v.dist = u.dist + weights(u,v)
+3		i = Q.index(v)
+4		decrease_key(Q,i,v.dist)
+5		v.prev = u

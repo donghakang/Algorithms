@@ -1,0 +1,25 @@
+
+MST-Kruskal (G, w)
+  A = empty
+  for each vertex v in G.V
+    make-set(v)
+  sort the edges of G.E into nondecreasing order.
+  for each edge (u,v) in G.E, taken in nondecreasing order by weights
+    if find-set(u) != find-set(v)
+      A = A in {(u,v)}
+      Union(u,v)
+  return A
+
+
+MST-Prim (G, w, r)
+  for each u in G.V
+    u.key = infinity
+    u.prev = nFAIL
+  r.key = 0
+  Q = G.V
+  while Q != 0
+    u = heap_extract_min(Q)
+    for each v in G.adj[u]
+      if v in Q and w(u,v) < v.key
+        v.prev = u
+        v.key = w(u,v)

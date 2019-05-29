@@ -29,7 +29,6 @@ def optimize_hyperspace_routes(star_list,jump_times):
     else:
         return HandleNegativeCycle(Prev, jump_times, star_list)
 
-
 def Setup_Prev(w):
     prev_ = [[None] * len(w) for i in range(len(w[0]))]
     for i in range (0, len(w)):

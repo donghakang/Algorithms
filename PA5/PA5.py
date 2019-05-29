@@ -35,10 +35,7 @@ def optimizeNuggets(priceList,numNuggets):
     while ChickenNuggets > 0:
         correct.append(split[ChickenNuggets])
         ChickenNuggets = ChickenNuggets - split[ChickenNuggets]
-
     return correct
-
-
 
 
 #  DO NOT EDIT BELOW THIS LINE

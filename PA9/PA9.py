@@ -11,7 +11,6 @@ import traceback, turtle, math
 # chromatic_call until you are sure that there should be an edge between
 # c1 and c2 in the final tree.
 
-
 def gather_friends(crusader_list,friend_matrix):
     MST = []
     SortDict = SortEdges(friend_matrix)
@@ -53,9 +52,6 @@ def dictAndCrusader(m, d):
     for i in range (0, len(d)):
         d[l[i]] = (m.crusader_list[d[l[i]][0]], m.crusader_list[d[l[i]][1]])
     return d
-
-
-
 
 
 

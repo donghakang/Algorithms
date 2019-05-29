@@ -130,7 +130,6 @@ def min_heap_insert(Q,node):
         i = parent(i)
 
 
-
 #  DO NOT EDIT BELOW THIS LINE
 
 tests = ['message0.txt','message1.txt','message2.txt','message3.txt']

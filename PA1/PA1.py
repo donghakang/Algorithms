@@ -1,6 +1,5 @@
 import turtle
 
-
 #Insertion_Sort: takes one parameter, a list of Rectangle objects
 #Uses insertion sort to sort the list in place from highest z value
 # to lowest.

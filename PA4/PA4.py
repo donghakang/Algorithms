@@ -1,6 +1,5 @@
 import traceback
 
-
 #CountingSort: takes as input a list of Student objects, and
 #a character houseOrYear, which is 'h' if we are sorting the
 #Students by house, or 'y' if sorting by year.

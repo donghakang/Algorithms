@@ -8,8 +8,6 @@ import traceback, turtle
 def find_path(start_node):
     start_node.set_color("gray")
     start_node.prev = None
-
-
     destination = DFS_Visit(start_node)
     print(destination)
 
